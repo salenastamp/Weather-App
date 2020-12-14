@@ -40,7 +40,7 @@ public class WeatherService {
 	allZips = zipRepository.findAll();
 	List lastTen = new ArrayList();
 	if (allZips.size() > 10) {
-		for (int i = allZips.size(); i > allZips.size()-10; i--) {
+		for (int i = allZips.size()-1; i > allZips.size()-11; i--) {
 			Object x = allZips.get(i);
 			lastTen.add(x);
 		}
